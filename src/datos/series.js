@@ -3,7 +3,7 @@ export const series = [
     "nombre": "Stranger Things",
     "año": 2016,
     "descripcion": "Un grupo de niños se enfrenta a fenómenos sobrenaturales en un pequeño pueblo de los años 80.",
-    "imagen_url": "https://upload.wikimedia.org/wikipedia/en/6/6e/Stranger_Things_characters.png"
+    "imagen_url": ""
   },
   {
     "nombre": "La Casa de Papel",

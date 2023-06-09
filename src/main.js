@@ -12,4 +12,5 @@ document.querySelector('main').innerHTML = home.template
 home.script()
 
 document.querySelector('header').innerHTML = header.template
+header.script()
 

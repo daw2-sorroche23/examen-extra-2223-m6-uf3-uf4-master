@@ -1,10 +1,11 @@
+import { User } from "../bd/user.js";
 import { series } from "../datos/series.js"
 
 export const home = {
     template: `
     <div class="row">
     <div class="col-12">
-<p class="text-end">Bienvenido <span>usuario@email.com</span></p>
+<p class="text-end">Bienvenido <span id="email">usuario@email.com</span></p>
         <h1 class="text-center mt-3 ">Series famosas de todos los tiempos</h1>
 <p class="text-center fs-4 p-3 bg-light border">Haz clic sobre cualquier ficha para mostrar toda la información en el panel derecho</p>
     </div>
@@ -15,7 +16,12 @@ export const home = {
     <div class="col-6" id="serie">
     </div>
       `,
-      script: () => {
+      script: async () => {
+        const usuario = await User.getUser()
+        if(usuario){
+            document.querySelector('#email').innerHTML = usuario.email
+        }
+
         let html = ''
 
         series.forEach(serie => {
